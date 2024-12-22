@@ -16,7 +16,9 @@
 
 ## 폴더 구조
 
-my_trend_following_app/ ├── strategies/ │ ├── init.py │ ├── donchian.py │ ├── ma_crossover.py │ └── bollinger.py ├── detectors/ │ ├── init.py │ └── trend_change.py ├── main_app.py ├── tradingview_webhook_example.py (옵션) ├── requirements.txt └── README.md
+```my_trend_following_app/ ├── strategies/ │ ├── init.py │ ├── donchian.py │ ├── ma_crossover.py │ └── bollinger.py ├── detectors/ │ ├── init.py │ └── trend_change.py ├── main_app.py ├── tradingview_webhook_example.py (옵션) ├── requirements.txt └── README.md
+
+```
 
 1. **`strategies/`**
 
@@ -182,5 +184,3 @@ Permission is hereby granted, free of charge, ...
 [이하 생략]
 
 ```
-# crypto_trade_bot
-# crypto_trade_bot
