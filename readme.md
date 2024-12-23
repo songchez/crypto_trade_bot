@@ -16,21 +16,13 @@
 
 ## 폴더 구조
 
-```bash
+````bash
 my_trend_following_app/
-├── strategies/
-│ ├── init.py
-│ ├── donchian.py
-│ ├── ma_crossover.py
-│ └── bollinger.py
-├── detectors/
-│ ├── init.py
-│ └── trend_change.py
-├── main_app.py
-├── tradingview_webhook_example.py
-├── requirements.txt
-└── README.md
-```
+
+
+버전:
+python3.12.8
+
 
 1. **`strategies/`**
 
@@ -71,9 +63,9 @@ my_trend_following_app/
 1. (선택) **가상환경** 생성
 
    ```bash
-   python -m venv venv
+   python3 -m venv venv
    source venv/bin/activate  # (Windows: venv\Scripts\activate)
-   ```
+````
 
 2. 필수패키지 설치
 
