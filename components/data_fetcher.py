@@ -2,14 +2,14 @@ import yfinance as yf
 import streamlit as st
 
 @st.cache_data
-def fetch_data(tickers, start_date, end_date):
+def fetch_data(tickers, start_date, end_date, interval='1d'):
     data_dict = {}
     successful_tickers = []
     failed_tickers = []
 
     for ticker in tickers:
         try:
-            data = yf.download(ticker.strip(), start=start_date, end=end_date)
+            data = yf.download(ticker.strip(), start=start_date, end=end_date, interval=interval)
             if not data.empty:
                 data_dict[ticker.strip()] = data
                 successful_tickers.append(ticker.strip())

@@ -4,14 +4,14 @@ from components.strategies import execute_strategy
 from components.data_fetcher import fetch_data
 
 def main():
-    st.title("추세추종 전략 및 다중 티커 추세 감지")
+    st.title("추세추종 전략 백터스터")
     
     # 사용자 UI 렌더링
-    tickers, start_date, end_date, selected_strategy, strategy_params = render_ui()
+    tickers, start_date, end_date, selected_strategy, strategy_params, interval = render_ui()
     
     if st.button("데이터 다운로드 및 전략 실행"):
         # 데이터 다운로드
-        data_dict, successful_tickers, failed_tickers = fetch_data(tickers, start_date, end_date)
+        data_dict, successful_tickers, failed_tickers = fetch_data(tickers, start_date, end_date, interval)
         
         if not successful_tickers:
             st.error("유효한 데이터를 가져올 수 없습니다.")
