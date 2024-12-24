@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-# 수퍼트렌드
+# 수퍼트렌드 전략
 def supertrend(df, atr_period=10, multiplier=3):
     """
     Calculate the SuperTrend indicator.

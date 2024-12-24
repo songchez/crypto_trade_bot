@@ -1,3 +1,5 @@
+
+# 볼린저 밴드 추세추종 전략
 def bollinger_band_strategy(close, window, std_dev):
     """
     Bollinger Band Strategy:

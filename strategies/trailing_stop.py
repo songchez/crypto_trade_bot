@@ -1,3 +1,5 @@
+
+# 트레일링 스탑 전략
 def trailing_stop_strategy(close, atr_window, atr_mult):
     """
     Trailing Stop Strategy:
