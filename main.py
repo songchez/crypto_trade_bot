@@ -2,9 +2,10 @@ import streamlit as st
 from components.ui import render_ui
 from components.strategies import execute_strategy
 from components.data_fetcher import fetch_data
+import streamlit.components.v1 as components
 
 def main():
-    st.title("TURTLE 백테스트봇S")
+    st.title("🐢 백테스트봇S")
     
     # 사용자 UI 렌더링
     tickers, start_date, end_date, selected_strategy, strategy_params, interval, fee, cash = render_ui()
@@ -23,6 +24,14 @@ def main():
         for ticker in successful_tickers:
             ohlcv_data = data_dict[ticker]
             execute_strategy(ticker, ohlcv_data, selected_strategy, strategy_params, fee, cash)
+
+        # buy_me_a_coffee 코드
+        buy_me_a_coffee_button = """
+        <a href="https://www.buymeacoffee.com/tama4840X" target="_blank">
+        <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a Coffee&emoji=&slug=tama4840X&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+        """
+        st.write(":red[⬇ 개발자에게 커피 한 잔 사주기 ⬇]")
+        components.html(buy_me_a_coffee_button, height=70)
 
 if __name__ == "__main__":
     main()
