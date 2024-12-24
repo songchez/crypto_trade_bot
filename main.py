@@ -4,7 +4,7 @@ from components.strategies import execute_strategy
 from components.data_fetcher import fetch_data
 
 def main():
-    st.title("백테스트봇S")
+    st.title("TURTLE 백테스트봇S")
     
     # 사용자 UI 렌더링
     tickers, start_date, end_date, selected_strategy, strategy_params, interval, fee, cash = render_ui()
