@@ -26,8 +26,7 @@ def render_ui():
             '1일': '1d',
             '1주': '1wk'
         }
-        interval_korean = st.radio("원하는 기준봉을 선택하세요:", options=list(interval_mapping.keys()),
-                                   index=3, horizontal=True)
+        interval_korean = st.radio("원하는 기준봉을 선택하세요:", options=list(interval_mapping.keys()),index=3, horizontal=True)
         interval = interval_mapping[interval_korean]
     with col2:
         fee = st.number_input("수수료율(%)", 0.001, 15.001, 0.051, 0.01, "%.3f")
