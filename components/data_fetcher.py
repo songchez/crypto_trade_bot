@@ -9,7 +9,19 @@ def fetch_data(tickers, start_date, end_date, interval='1d'):
 
     for ticker in tickers:
         try:
-            data = yf.download(ticker.strip(), start=start_date, end=end_date, interval=interval)
+            if interval == '4h':
+                df = yf.download(ticker.strip(), start=start_date, end=end_date, interval='1h')
+                data = df.resample('4H').agg({
+                    'Open': 'first',
+                    'High': 'max',
+                    'Low': 'min',
+                    'Close': 'last',
+                    'Volume': 'sum'
+                })
+            else:
+                data = yf.download(ticker.strip(), start=start_date, end=end_date, interval=interval)
+
+            print(data)
             if not data.empty:
                 data_dict[ticker.strip()] = data
                 successful_tickers.append(ticker.strip())
