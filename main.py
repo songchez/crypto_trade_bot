@@ -5,7 +5,12 @@ from components.data_fetcher import fetch_data
 import streamlit.components.v1 as components
 
 def main():
-    st.title("🐢 백테스트봇S")
+    st.title("🐢 백테스트봇S 1.0")
+    # 사이드바에서 페이지 선택
+    page = st.sidebar.selectbox(
+        "페이지를 선택하세요",
+        ["홈", "About Us"]
+    )
     
     # 사용자 UI 렌더링
     tickers, start_date, end_date, selected_strategy, strategy_params, interval, fee, cash = render_ui()
