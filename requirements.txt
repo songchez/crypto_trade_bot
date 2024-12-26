@@ -1,6 +1,6 @@
-numpy==1.23.5
-pandas==2.2.3
-streamlit==1.41.1
-vectorbt==0.27.0
-yfinance==0.2.51
+numpy
+pandas
+streamlit
+vectorbt
+yfinance
 
