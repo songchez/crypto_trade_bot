@@ -1,6 +1,7 @@
 import streamlit as st
 
 def render_discord_page():
+    st.balloons()
     # 페이지 제목 및 설명
     st.write("# 투자고수가 되고싶나요?")
     st.subheader("그렇다면 잘 찾아오셨습니다! 여기는 시스템 트레이딩을 연구하고 공유하는 터틀 트레이딩 커뮤니티 입니다!🎉")

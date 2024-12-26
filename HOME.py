@@ -13,7 +13,8 @@ st.set_page_config(
 
 def main():
     st.title("🐢 터틀 백테스트봇S 1.0")
-    
+    st.page_link("pages/1_설명서.py", label=":grey[터틀봇이 처음이신가요? :blue[설명서 보러가기 💁🏻]]")
+
     # 사용자 UI 렌더링
     tickers, start_date, end_date, selected_strategy, strategy_params, interval, fee, cash = render_ui()
     
